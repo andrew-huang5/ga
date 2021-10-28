@@ -12,12 +12,12 @@ import random
 ###  n2  1      0     0
 ###  n3  0      1     0
 
-### we can encode this as the bitstring 011101110 
+### we can encode this as the bitstring 011100010
 
 ### We can use the regular BitStringProblem class to represent Nurse Scheduling problems. We 
 ### just need a factory that can produce appropriate fitness functions, given a set of constraints. 
 
-def NurseFactory(contraints) :
+def NurseFactory(constraints) :
     def f(chr) :
         return sum([constraint(chr)
                for constraint in constraints])
