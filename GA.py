@@ -36,3 +36,20 @@ class GA :
         self.problem.evalFitness(self.population) 
         print "Final results: " 
         print self.population
+
+
+
+
+import Elitism, Crossover,Selector, BitStringGAProblem, GA
+
+def allOnes(chr):
+    return len([x for x in chr.bitstring if x == '1'])
+
+class MySolver(GA.GA, Elitism.DeterministicElites, Crossover.OnePointStringCrossover, Selector.RouletteSelector):
+    def __init__(self, problem):
+        GA.GA.__init__(self, problem)
+
+
+b = BitStringGAProblem.BitStringGAProblem(allOnes, 20)
+m = MySolver(b)
+m.run()

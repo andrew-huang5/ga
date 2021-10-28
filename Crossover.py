@@ -51,6 +51,7 @@ class PermutationCrossover(Crossover) :
 ## works with TSP Chromosomes.
 class GreedyCrossover(Crossover) :
     def crossover(self, c1, c2) :
+        pass
 ### you do this one.
 ### The algorithm is as follows:
 ### Child1[0] == parent1[0]

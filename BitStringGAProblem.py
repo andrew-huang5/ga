@@ -45,4 +45,4 @@ class BitChromosome(Chromosome) :
 
     def __repr__(self) :
         return self.bitstring
-Probl
+
