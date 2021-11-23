@@ -35,7 +35,7 @@ numDays = 7
 def oneShiftEach(bitstring) :
     total = 0
     for i in range(numNurses) :
-        total += bitstring[i:i+21].count('1') -1
+        total += bitstring.bitstring[i:i + 21].count('1') - 1
     return total
 
 ### There should be exactly one nurse working each shift.
@@ -50,7 +50,7 @@ def getShifts(bitstring) :
     for i in range(numShifts) :
         shift = []
         for j in range(numNurses) :
-            shift.append(bitstring[(j*numShifts) +i])
+            shift.append(int(bitstring.bitstring[(j*numShifts) + i]))
         nlist.append(shift)
     return nlist
 
